@@ -14,7 +14,7 @@ parser = argparse.ArgumentParser(description="PyTorch LESPS test")
 parser.add_argument("--model_names", default=['DNANet'], nargs='+', help="model_name: 'ACM', 'ALCNet', 'DNANet'")
 parser.add_argument("--pth_dirs", default=['log/ICPR/ICPR2024/DNANet_LESPS_centroid_3.pth.tar'],
                                             nargs='+', help="checkpoint dir, default=None")
-parser.add_argument("--dataset_names", default=['ICPR2024'], nargs='+',
+parser.add_argument("--dataset_names", default=['LimitIRSTD'], nargs='+',
                     help="dataset_name: 'NUAA-SIRST', 'NUDT-SIRST', 'IRSTD-1K', 'SIRST3', 'NUDT-SIRST-Sea'")
 parser.add_argument("--img_norm_cfg", default=None, type=dict,
                     help="specific a img_norm_cfg, default=None (using img_norm_cfg values of each dataset)")
@@ -24,7 +24,7 @@ parser.add_argument("--img_norm_cfg_std", default=None, type=float,
                     help="specific a std value img_norm_cfg, default=None (using img_norm_cfg values of each dataset)")
 
 parser.add_argument("--dataset_dir", default='./datasets/', type=str, help="train_dataset_dir")
-parser.add_argument("--save_img", default=True, type=bool, help="save image of or not")
+parser.add_argument("--save_img", default=False, type=bool, help="save image of or not")
 parser.add_argument("--save_img_dir", type=str, default='./results/', help="path of saved image")
 parser.add_argument("--save_log", type=str, default='./log/', help="path of saved .pth")
 parser.add_argument("--threshold", type=float, default=0.5)
